@@ -1,9 +1,9 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
-  const isProduction = env === 'production'; 
-  const CSSExtract = new ExtractTextPlugin('styles.css'); 
+  const isProduction = env === 'production';
+  const CSSExtract = new ExtractTextPlugin('styles.css');
 
   return {
     entry: './src/app.js',
@@ -21,15 +21,15 @@ module.exports = (env) => {
         use: CSSExtract.extract({
           use: [
             {
-              loader: 'css-loader', 
+              loader: 'css-loader',
               options: {
-                sourceMap: true 
+                sourceMap: true
               }
-            }, 
+            },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true 
+                sourceMap: true
               }
             }
           ]
@@ -37,14 +37,12 @@ module.exports = (env) => {
       }]
     },
     plugins: [
-      CSSExtract 
+      CSSExtract
     ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
-      host: '0.0.0.0',
-      disableHostCheck: true,
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true
     }
-  }; 
-}; 
+  };
+};
