@@ -233,7 +233,13 @@ babel object spread operator
 
 ##### react-test-renderer ######
 
+# Git Commands 
 
+git init - Create a new git repo 
+git status - View the changes to your project
+git add - Add files to the staging area
+git commit - Creates a new commit with files from stagin area
+git log - View recent commits
 
 
 
