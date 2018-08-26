@@ -242,6 +242,9 @@ git commit - Creates a new commit with files from stagin area
 git log - View recent commits
 
 
+# extract text webpack plugin 
+
+
 
 -----------------------------------------------------------
 
